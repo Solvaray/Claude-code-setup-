@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(*)",
+      "Write(*)",
+      "Bash(*)",
+      "WebFetch(domain:*)",
+      "WebSearch"
+    ],
+    "ask": [
+      "Bash(rm *)",
+      "Bash(rmdir *)",
+      "Bash(npm *)",
+      "Bash(pip *)",
+      "Bash(git push *)"
+    ]
+  },
+  "outputStyle": "Explanatory"
+}
