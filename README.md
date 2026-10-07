@@ -10,27 +10,39 @@ Master-Template für alle Nico's Freelance-Projekte.
 
 ## Wie nutzen?
 
-### Option 1: Kopieren (einfach)
+### Option 1: PowerShell Copy-Paste (Windows)
 
-In deinem Projekt:
-```bash
-cp -r /pfad/zu/claude-code-setup/.claude .
-cp /pfad/zu/claude-code-setup/CLAUDE.md .
-```
+Für jedes Projekt einzeln:
 
-Dann committed:
-```bash
-git add .claude CLAUDE.md
+```powershell
+# 1. Zu deinem Projekt gehen
+cd C:\path\to\mein-projekt
+
+# 2. .claude Ordner + CLAUDE.md kopieren
+cp -r C:\path\to\Claude-code-setup-\.claude .
+cp C:\path\to\Claude-code-setup-\CLAUDE.md .
+
+# 3. Commit
+git add .claude, CLAUDE.md
 git commit -m "Add Claude Code setup"
 ```
 
-### Option 2: Git Submodule (fortgeschritten)
+### Option 2: Automatisches Setup-Script (Windows)
 
-```bash
-git submodule add https://github.com/Solvaray/claude-code-setup.git .claude-setup
+Nutze `setup.ps1` um alle Projekte auf einmal zu updaten:
+
+```powershell
+# Script runterladen und ausführen
+.\setup.ps1
 ```
 
-Dann in deinem `.claude/` symlinken oder Files kopieren.
+Das Script fragt dich nach deinen Projekt-Pfaden und macht den Rest automatisch.
+
+### Option 3: Git Submodule (fortgeschritten)
+
+```bash
+git submodule add https://github.com/Solvaray/Claude-code-setup.git .claude-setup
+```
 
 ## Das sollte jedes Projekt haben
 
